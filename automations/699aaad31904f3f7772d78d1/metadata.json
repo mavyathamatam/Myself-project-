@@ -1,0 +1,17 @@
+{
+  "automationId": "699aaad31904f3f7772d78d1",
+  "automationName": "Unnamed Automation",
+  "version": "v2",
+  "mode": "multi-file",
+  "dependencies": [
+    {
+      "id": "1771744160556_2",
+      "name": "acorn",
+      "version": "latest"
+    }
+  ],
+  "environmentVariables": [
+    "CODE_SNIPPET"
+  ],
+  "syncedAt": "2026-02-22T07:19:36.102Z"
+}
