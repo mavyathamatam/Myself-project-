@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Annamacharya University</title>
+
+<style>
+
+/* Title */
+#title{
+text-align:center;
+padding:15px;
+cursor:pointer;
+transition: all 0.3s ease;
+}
+
+#title:hover{
+background-color:#003366;
+color:white;
+border-radius:8px;
+width:60%;
+margin:auto;
+}
+
+/* Navigation bar */
+.navbar{
+text-align:center;
+margin-top:20px;
+}
+
+/* Menu buttons */
+.navbar a{
+text-decoration:none;
+font-size:18px;
+padding:10px 20px;
+margin:5px;
+border:2px solid #003366;
+border-radius:6px;
+background-color:#e6f0ff;
+color:black;
+display:inline-block;
+transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.navbar a:hover{
+background-color:#003366;
+color:white;
+}
+
+/* Active menu */
+.navbar a.active{
+background-color:green !important;
+color:white !important;
+}
+
+/* Content box */
+.content{
+border:2px solid #003366;
+border-radius:8px;
+padding:20px;
+width:60%;
+margin:auto;
+margin-top:20px;
+background-color:#f5f5f5;
+}
+
+/* Exam Result background light green */
+#result{
+background-color:#ccffcc;
+}
+
+/* Button style */
+button{
+padding:8px 15px;
+background:#003366;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+</style>
+
+<script>
+
+function showSection(section, element){
+
+document.getElementById("home").style.display="none";
+document.getElementById("about").style.display="none";
+document.getElementById("result").style.display="none";
+
+/* remove active menu */
+var links=document.querySelectorAll(".navbar a");
+links.forEach(function(link){
+link.classList.remove("active");
+});
+
+element.classList.add("active");
+
+/* show selected section */
+document.getElementById(section).style.display="block";
+
+}
+
+</script>
+</head>
+
+<body>
+
+<h1 id="title">Annamacharya University</h1>
+<hr>
+
+<!-- Navigation -->
+<div class="navbar">
+<a href="#" onclick="showSection('home', this)">Home</a>
+<a href="#" onclick="showSection('about', this)">About</a>
+<a href="#" onclick="showSection('result', this)">Exam Result</a>
+<a href="https://youtu.be/6C1MlNW0PvM" target="_blank">Contact</a>
+</div>
+
+<center>
+
+<!-- Home Section -->
+<div id="home" class="content" style="display:none;">
+
+<h2>Welcome to Annamacharya University</h2>
+
+<p>This is the home page of the university website.</p>
+
+<h3>Student Login</h3>
+
+<form>
+Registration Number:<br>
+<input type="text" required><br><br>
+
+Password:<br>
+<input type="password" required><br><br>
+
+<input type="submit" value="Login">
+</form>
+
+<br>
+
+<button onclick="showSection('home', document.querySelector('.navbar a'))">
+Back to Home
+</button>
+
+</div>
+
+<!-- About Section -->
+<div id="about" class="content" style="display:none;">
+
+<h2>About the College</h2>
+
+<p>
+Annamacharya University is located in Rajampet, Andhra Pradesh.
+The university offers engineering, management, and science courses
+with modern laboratories and experienced faculty for quality education.
+</p>
+
+</div>
+
+<!-- Exam Result Section -->
+<div id="result" class="content" style="display:none;">
+
+<h2>Exam Result</h2>
+
+<form>
+
+Hall Ticket Number:<br>
+<input type="text" required><br><br>
+
+Password:<br>
+<input type="password" required><br><br>
+
+<input type="submit" value="Get Result">
+
+</form>
+
+</div>
+
+</center>
+
+</body>
+</html>
