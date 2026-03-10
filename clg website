@@ -2,17 +2,13 @@
 <html>
 <head>
 <title>Annamacharya University</title>
-
 <style>
-/* Title normal */
 #title{
 text-align:center;
 padding:15px;
 cursor:pointer;
 transition: all 0.3s ease;
 }
-
-/* Title hover effect */
 #title:hover{
 background-color:#003366;
 color:white;
@@ -20,14 +16,10 @@ border-radius:8px;
 width:60%;
 margin:auto;
 }
-
-/* Navigation bar */
 .navbar{
 text-align:center;
 margin-top:20px;
 }
-
-/* Menu buttons */
 .navbar a{
 text-decoration:none;
 font-size:18px;
@@ -40,20 +32,14 @@ color:black;
 display:inline-block;
 transition: all 0.3s ease;
 }
-
-/* Hover effect for menu */
 .navbar a:hover{
 background-color:#003366;
 color:white;
 }
-
-/* Active menu click */
 .navbar a.active{
 background-color:green !important;
 color:white !important;
 }
-
-/* Content box */
 .content{
 border:2px solid #003366;
 border-radius:8px;
@@ -64,50 +50,35 @@ margin-top:20px;
 background-color:#f5f5f5;
 }
 </style>
-
 <script>
-/* Menu click to show sections and change color */
 function showSection(section, element){
 document.getElementById("home").style.display="none";
 document.getElementById("about").style.display="none";
-
-/* remove active from all menu items */
 var links=document.querySelectorAll(".navbar a");
 links.forEach(function(link){
 link.classList.remove("active");
 });
-
-/* add active to clicked menu */
 element.classList.add("active");
-
-/* show selected section */
 document.getElementById(section).style.display="block";
 }
 </script>
-
 </head>
-
 <body>
-
 <!-- Title -->
 <h1 id="title">Annamacharya University</h1>
 <hr>
-
 <!-- Navigation -->
 <div class="navbar">
 <a href="#" onclick="showSection('home', this)">Home</a>
 <a href="#" onclick="showSection('about', this)">About</a>
 <a href="https://youtu.be/6C1MlNW0PvM" target="_blank">Contact</a>
 </div>
-
 <!-- Content -->
 <center>
-
 <!-- Home section -->
 <div id="home" class="content" style="display:none;">
 <h2>Welcome to Annamacharya University</h2>
 <p>This is the home page of the university website.</p>
-
 <h3>Student Login</h3>
 <form action="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
 Registration Number:<br>
@@ -117,7 +88,6 @@ Password:<br>
 <input type="submit" value="Login">
 </form>
 </div>
-
 <!-- About section -->
 <div id="about" class="content" style="display:none;">
 <h2>About the College</h2>
@@ -127,7 +97,6 @@ The university offers engineering, management, and science courses
 with modern laboratories and experienced faculty for quality education.
 </p>
 </div>
-
 </center>
 </body>
 </html>
